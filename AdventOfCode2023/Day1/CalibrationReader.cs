@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Day1
@@ -43,32 +44,6 @@ namespace Day1
                     int value = (10 * first) + last;
 
                     calibrationValues.Add(value);
-                }
-            }
-
-            return calibrationValues;
-        }
-
-        public IEnumerable<int> ReadCalibration2(string[] data)
-        {
-            var calibrationValues = new List<int>();
-
-            var regex = new Regex(@"(\d)");
-
-            foreach (var line in data)
-            {
-                var matchResult = regex.Match(line);
-
-                if (matchResult.Success)
-                {
-                    if (matchResult.Groups.Count > 0)
-                    {
-                        var first = matchResult.Groups[0].Value;
-                        var last = matchResult.Groups[matchResult.Groups.Count - 1].Value;
-
-                        calibrationValues.Add(Int32.Parse(first));
-                        calibrationValues.Add(Int32.Parse(last)); // last could also be first if just one item in list
-                    }
                 }
             }
 

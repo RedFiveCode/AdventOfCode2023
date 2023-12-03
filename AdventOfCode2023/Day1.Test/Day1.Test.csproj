@@ -34,6 +34,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="ExampleData.PartTwo.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="ExampleData.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
