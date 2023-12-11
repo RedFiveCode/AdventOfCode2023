@@ -19,5 +19,25 @@ namespace Day2
         {
             return Rounds.All(r => r.Red <= expectedRed && r.Green <= expectedGreen && r.Blue <= expectedBlue);
         }
+
+        public Round GetFewestCubeCounts()
+        {
+            int minimumRed = Rounds.Select(r => r.Red).Max();
+            int minimumGreen = Rounds.Select(r => r.Green).Max();
+            int minimumBlue = Rounds.Select(r => r.Blue).Max();
+
+            return new Round(minimumRed, minimumGreen, minimumBlue);
+        }
+
+        public int GetPowerSum()
+        {
+            var fewest = GetFewestCubeCounts();
+            return GetPower(fewest);
+        }
+
+        private int GetPower(Round round)
+        {
+            return round.Red * round.Green * round.Blue;
+        }
     }
 }
