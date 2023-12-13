@@ -46,3 +46,7 @@ AdventOfCode2023/Day2.Test/bin/
 AdventOfCode2023/Day2.Test/obj/
 AdventOfCode2023/Day2/bin/
 AdventOfCode2023/Day2/obj/
+AdventOfCode2023/Day*.Test/bin/
+AdventOfCode2023/Day*.Test/obj/*
+AdventOfCode2023/Day*/bin/*
+AdventOfCode2023/Day*/obj/*
