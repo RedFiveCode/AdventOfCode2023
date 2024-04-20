@@ -50,3 +50,4 @@ AdventOfCode2023/Day*.Test/bin/
 AdventOfCode2023/Day*.Test/obj/*
 AdventOfCode2023/Day*/bin/*
 AdventOfCode2023/Day*/obj/*
+.vs/
